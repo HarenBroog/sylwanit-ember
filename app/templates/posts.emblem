@@ -1,0 +1,18 @@
+.posts
+  .posts-header.resource-navigation
+    .row
+      .col-xs-2
+        .icon.icon-centered.icon-big
+          i.fa.fa-plus
+      .col-xs-10.resource-filters.container-fluid
+        .form-group.resource-search
+          form.search-form.form-inline
+            .input-group
+              = input class='form-control search' placeholder='Post title, body...' type='text'
+              span.input-group-btn.pull-left
+                a class='btn' href='' onclick="event.preventDefault(); $('.search-form').submit();"
+                  i.fa.fa-search
+                  | Search
+
+  each post in controller
+    render 'post'

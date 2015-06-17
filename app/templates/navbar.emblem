@@ -1,0 +1,32 @@
+nav.navbar.navbar-fixed-top role='navigation'
+  .overlay
+  .container
+    ul.nav.navbar-nav
+      li.brand
+        link-to '' | Sylwanit
+      li
+        link-to 'users'
+          i.fa.fa-users.fa-lg
+          strong Users
+      li
+        link-to 'posts'
+          i.fa.fa-book.fa-lg
+          strong Posts
+    if session.isAuthenticated
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle aria-expanded='false' data-toggle='dropdown' href='' role='button'
+            .user-profile.user-profile-navbar
+              strong Damian Romanów
+              .user-avatar
+                img src='https://s3-eu-west-1.amazonaws.com/sylwanit/production/uploads/user/avatar/1/thumb_f5f9f983fc3cb20af4da06c13a69d923.png'
+                / current_user.avatar.thumb
+              span.caret
+          ul.dropdown-menu role='menu'
+            li
+              i.fa.fa-cog.fa-fw
+              | Settings
+            li.divider
+            li
+              i.fa.fa-sign-out.fa-fw
+              | Sign out

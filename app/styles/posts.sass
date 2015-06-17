@@ -1,0 +1,70 @@
+.post
+  +dark-box($post-padding, $post-margin-bottom)
+  +dark-box-hover
+
+.post
+  .post-header
+    font-size: $font-size-title
+
+    .user-avatar
+      float: left
+      margin-right: 10px
+
+    .post-author a
+      font-weight: $font-weight-bolder
+      color: $secondary-color
+
+    .post-timestamps
+      font-size: $font-size-footer
+
+    .post-title
+      margin: 10px auto
+      margin-top: 0px
+
+      +border
+      +border-bottom-only($border-width)
+      border-color: lighten($secondary-color, 10%)
+
+  .post-body
+    font-size: $font-size-body
+
+
+  .post-photo
+    +image-container
+    +image-fixed-size(128px)
+
+    .post-no-photo
+      width: 100%
+      height: 100%
+      text-align: center
+      display: table
+
+      span
+        display: table-cell
+        vertical-align: middle
+        color: $font-color
+
+        i
+          font-size: $icon-size-big
+
+  .post-comments
+    .icon-big
+      margin-left: -0.6em
+
+      &:hover
+        .post-comment-new
+          color: $secondary-color
+          text-shadow: 1px 1px 2px darken($secondary-color, 20%), -1px -1px 2px darken($secondary-color, 20%)
+
+      .post-comment-new
+        text-shadow: 1px 1px 2px $secondary-color, -1px -1px 2px $secondary-color
+        position: relative
+
+        i
+          position: absolute
+          top: 0.5em
+          left: 1.6em
+
+.post-full
+  .post-footer
+    margin-top: 15px

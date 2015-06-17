@@ -1,0 +1,49 @@
+.navbar
+  border-bottom: $navbar-border-bottom-width solid rgba(0,0,0,.15)
+  height: $navbar-heigth + $navbar-border-bottom-width
+
+  .overlay
+    position: fixed
+    top: 0px
+    height: $navbar-heigth + $navbar-border-bottom-width
+    width: 100%
+    background: $navbar-background-color
+
+
+  ul.nav > li
+    +transition(all 100ms ease-in-out)
+    color: $navbar-link-color
+
+    > a
+      max-height: $navbar-heigth
+      color: $navbar-link-color
+      font-size: $navbar-font-size
+      font-weight: $font-weight-thin
+
+      > i
+        margin-right: 5px
+
+    &:not(.brand)
+      &.active, &:focus, &:hover
+        border-bottom: $navbar-border-bottom-width solid $navbar-link-border-hover
+        margin-bottom: -($navbar-border-bottom-width)
+        background-color: $navbar-link-background-hover
+
+      > a:hover, a:visited, a:focus
+        background-color: transparent
+
+    &.brand a
+      color: $secondary-color
+      font-size: $navbar-font-size + 0.5em
+      font-style: italic
+      font-weight: $font-weight-bold
+      font-family: 'Amaranth'
+      padding-left: 20px
+      padding-right: 20px
+
+      &:hover, &:focus
+        background-color: transparent
+        text-shadow: 0px 0px 20px $white-transparent-6
+
+
+

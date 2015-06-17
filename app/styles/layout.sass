@@ -1,0 +1,48 @@
+body, html
+  height: 99%
+
+body
+  background-image: $background-image
+  background-attachment: fixed
+  color: $font-color
+  text-shadow: 1px 1px 1px $black
+  font-family: $font-stack
+  font-weight: $font-weight-thin
+  font-size: $font-size
+  overflow-y: scroll
+
+  .spacer
+    content: ''
+    height: 30px
+
+  .overlay
+    +background-image(linear-gradient(to right, $body-background-side, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-middle, $body-background-side))
+    position: fixed
+    top: $navbar-heigth + $navbar-border-bottom-width
+    height: 100%
+    width: 100%
+    z-index: -1
+
+  .content
+    height: 100%
+    padding-top: 60px
+    width: $content-width
+
+  header
+    font-weight: $font-weight
+    font-size: $font-size-title
+    font-family: 'Oswald'
+
+  .display-none
+    display: none
+
+  .time
+    color: $secondary-color
+    font-weight: $font-weight-bolder
+    display: inline-block
+
+  textarea
+    overflow: hidden
+
+*:focus
+  outline: $secondary-color auto 5px !important

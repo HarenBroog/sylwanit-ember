@@ -1,0 +1,25 @@
+.user-profile
+  &:hover
+    .user-avatar
+      // box-shadow: 1px 1px 5px 1px $black !important
+
+  .user-avatar
+    +image-container
+    +image-fixed-size($avatar-thumb-size)
+
+  &.user-profile-full
+    .user-avatar
+      border-style: none
+      +image-fixed-size($avatar-preview-size)
+
+  &.user-profile-list
+    +dark-box(5px, 5px)
+    +dark-box-hover
+
+    .user-avatar
+      margin: auto 10px
+
+  &.user-profile-navbar
+    .user-avatar
+      margin: ($navbar-heigth - $avatar-thumb-size - 2*$avatar-border-width)/2 5px
+

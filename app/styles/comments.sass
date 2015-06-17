@@ -1,0 +1,34 @@
+.comment-wrapper
+  +dark-box($comment-padding, $comment-margin-bottom)
+  +dark-box-hover
+
+  &:after
+    content: ''
+    display: block
+    height: 0
+    clear: both
+
+  .user-profile
+    float: left
+
+  .comment
+    padding-left: 15px
+    display: block
+    overflow: hidden
+
+    .comment-header
+      font-size: $font-size
+      font-weight: $font-weight-bolder
+      +border
+      +border-bottom-only($border-width)
+
+    input#comment_body
+      width: 100%
+      height: 40px
+
+    .btn
+      float: left
+
+    .comment_body
+      +arrow-box($avatar-thumb-size/2)
+

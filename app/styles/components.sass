@@ -1,0 +1,109 @@
+.btn
+  background: $button-background-color
+  color: $font-color
+  font-weight: $font-weight-bolder
+  text-transform: uppercase
+  text-shadow: 1px 1px 1px $very-dark-gray
+  display: inline-block
+  min-width: $button-width-min
+  +border
+  +bootstrap-control
+
+  &:hover, &:focus
+    color: $font-color
+    background-color: $black-transparent-3
+
+.icon
+  font-size: $icon-size
+
+  &.icon-centered
+    text-align: center
+  &.icon-big
+    font-size: $icon-size-big
+
+a:not(.btn)
+  color: $font-color
+
+  > i
+    text-shadow: 1px 1px 1px $secondary-color, -1px -1px 1px $secondary-color
+
+  &:hover, &:visited, &:focus
+    text-decoration: none
+
+  &:hover, &:focus
+    color: $font-color
+    text-shadow: 2px 2px 2px $black
+
+    > i
+      color: $secondary-color
+      text-shadow: 2px 2px 1px $font-color, -1px -1px 2px $font-color
+
+    .user-avatar, .post-photo
+      +bootstrap-light
+
+.resource-navigation, .resource-new
+  +dark-box($post-padding, $post-margin-bottom)
+  +dark-box-hover
+
+  .resource-header
+    .user-avatar
+      float: left
+      margin-right: 10px
+
+.resource-navigation
+  +row-column-vertical-divider($post-padding)
+  .no-content
+    border-top: $border-width-bold solid $border-color
+
+  .resource-filters
+    .resource-order, .resource-search
+      display: inline-block
+
+    .resource-search
+      padding-top: 15px
+      width: 88%
+
+      .input-group
+        width: 100%
+
+        .input-group-btn
+          width: 15%
+        input#q
+          width: 85%
+
+.dropdown
+  .dropdown-toggle
+    padding: 0 15px
+    height: $navbar-heigth
+
+    *
+      vertical-align: middle
+
+  ul.dropdown-menu
+    padding: 0
+
+    li
+      padding: 5px
+
+      &:hover
+        background-color: $light-gray
+
+        a , i
+          background-color: $light-gray
+
+      a, i
+        color: $black
+        font-weight: $font-weight-bold
+        text-shadow: none
+        font-size: $navbar-font-size - 0.9em
+
+        &:hover, &:focus, &:visited
+          color: $black
+          text-shadow: none
+
+    li.divider
+      margin: 0
+      padding: 0
+
+
+

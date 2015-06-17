@@ -1,0 +1,43 @@
+.content
+  margin-top: 10px
+
+.promoted-posts, .categories
+  &:hover .title
+    color: $secondary-color
+
+    i
+      color: $secondary-color
+
+  .post
+    +dark-box(4px, 2px)
+    +dark-box-hover
+
+    &:hover .post-title
+      color: $star-color
+
+  .category
+    margin-bottom: 5px
+    margin-right: 5px
+    cursor: pointer
+    +dark-box(0px, 5px)
+    +dark-box-hover
+
+    .category-icon i
+      +transition(all 1000ms ease-in-out)
+
+    &:hover .category-icon i
+      +transform(rotateY(160deg) scale(1.2))
+
+    .category-name
+      padding: auto 15px
+      margin: 1% 0
+      font-size: $font-size+1.5em
+
+    .category-icon
+      background: $black-transparent-2
+      text-align: center
+      +border-right-separator
+
+      i
+        margin: 8px auto
+        font-size: $font-size + 2em

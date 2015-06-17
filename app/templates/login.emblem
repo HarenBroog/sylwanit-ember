@@ -1,0 +1,10 @@
+= em-form model=model action='login' class='form-minimalistic' form_layout='default' submit_button=false
+  .title.centered Log in
+  = em-input property='email' type='email' placeholder='example@google.com...' value=credentials.email
+  = em-input property='password' type='password' autocomplete='off' placeholder='password...' value=credentials.password
+  = em-checkbox property='remember_me' label='Remember me'
+  .form-actions
+    = input disabled=isntValid type="submit" class="btn btn-primary col-sm-12" value="Login"
+    button click='logout' class='btn btn-primary' Logout
+  .row
+

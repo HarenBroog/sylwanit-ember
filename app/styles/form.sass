@@ -1,0 +1,61 @@
+form
+  label
+    //dfont siz
+
+  .checkbox label
+    font-weight: bold
+
+  .form-group:first-child
+    margin-top: 5px
+
+  .form-group
+    &.buttons, &.shared-links
+      margin-bottom: 0px
+
+      & + .form-group.shared-links
+        padding-top: 5px
+
+  .devise-links
+    text-align: center
+
+    a
+      display: block
+      color: $form-devise-link-color
+      text-shadow: 1px 1px 2px $black
+      font-weight: $font-weight-bolder
+      +transition(all 100ms ease-in-out)
+
+      &:hover
+        +animation(shake 0.18s 2 ease-in)
+  input, select, textarea
+    &.string, &.password, &.select, &.text, &.search
+      +input-stylish
+
+  input[type="email"], input[type="password"], input[type="text"]
+    +input-stylish
+
+  select.select
+    option
+      background-color: $black-transparent-4
+
+  &.form-minimalistic
+    margin: auto auto
+    margin-top: 60px
+    width: 40%
+
+    +dark-box(15px, 0px)
+
+    .checkbox
+      padding-left: 2px
+
+    .title
+      margin-bottom: 10px
+      font-weight: $font-weight-bolder
+      text-shadow: -1px -1px 1px $black, 2px 2px 2px $black
+
+      &.centered
+        text-align: center
+
+    input.submit
+      display: block
+      float: none

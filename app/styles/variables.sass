@@ -1,0 +1,96 @@
+@import "colors"
+@import "animations"
+@import "fonts"
+@import "mixins"
+
+// Main
+$fa-font-path:  "/assets/fonts"
+$assets-url:    "https://s3-eu-west-1.amazonaws.com/sylwanit/assets/"
+
+$background-image: url($assets-url + "backgrounds/background-tweed.jpg")
+$secondary-color: $lime
+$secondary-color-rgba: $lime-rgba
+$column-percentage: 8.33%
+$body-background-side:       $white-transparent-3
+$body-background-middle:     $transparent
+$content-width: 80%
+
+//  Borders
+
+$border-color: $white-transparent-3
+$border-radius: 3px
+$border-width: 1px
+$border-width-bold: 2px
+
+// Buttons
+
+$button-width-min: 50px
+$button-background-color: $black-transparent-4
+$button-hover-color: $secondary-color
+
+$scale-factor: 1.015
+$small-margin: 5px
+$medium-margin: 10px
+$big-margin: 20px
+
+// Fonts
+
+$font-stack: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+$font-color: $white
+
+$font-size: 1.05em
+$font-size-title: 1.2 * $font-size
+$font-size-footer: 0.8 * $font-size
+$font-size-body: 1.1 * $font-size
+
+$icon-size: 1.5 * $font-size
+$icon-size-big: 2.5 * $font-size
+
+$font-weight-thiner: 300
+$font-weight: 400
+$font-weight-thin: 500
+$font-weight-bold: 600
+$font-weight-bolder: 800
+
+
+// Dark-box
+
+$dark-box-margin-bottom: 5px
+
+// Comments
+
+$comment-padding: 15px
+$comment-margin-bottom: 3px
+
+// Posts
+
+$post-padding: 15px
+$post-margin-bottom: 8px
+
+// Navbar
+
+$navbar-heigth: 50px
+$navbar-border-bottom-width: 5px
+$navbar-background-color:   $black-transparent-4
+$navbar-font-size: $font-size+1em
+$navbar-link-color:        $white
+$navbar-link-background-hover:        rgba(255,255,255,0.2)
+$navbar-link-border:        $black-transparent-6
+$navbar-link-border-hover:  $white
+
+// Avatars
+
+$avatar-thumb-size: 40px
+$avatar-preview-size: 128px
+$avatar-border-width: $border-width
+$avatar-border-color: darken($white, 20%)
+$avatar-background-color: $black-transparent-4
+
+// Forms
+
+$form-border-color: $border-color
+$form-border-width: 2px
+$form-border-radius: $border-radius
+$form-devise-link-color: $white
+
+@import "bootstrap_overwrite"
